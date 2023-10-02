@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Instagram Backup</title>
+    <link rel="stylesheet" href="../css/reset_stylesheet.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <script src="../javascript/data.js" defer></script>
+    <script src="../javascript/script.js" defer></script>
+    <link
+      rel="icon"
+      href="../icons/instagram_logo_round.png"
+      height="24"
+      width="24"
+    />
+  </head>
+  <body onload="initIndex()">
+    <div id="page">
+      <header class="hide_container">
+        <div class="header-logos">
+          <img src="../icons/instagram_writing.png" alt="" height="36" />
+          <img src="../icons/instagram_arrow_down.svg" alt="" height="12" />
+        </div>
+
+        <div class="header-logos">
+          <input
+            id="searchField"
+            class="search-field"
+            placeholder="Suchen ..."
+          />
+          <img
+            onclick="notAvailable()"
+            id="searchIcon"
+            class="search-icon"
+            src="../icons/instagram_search_light.svg"
+            alt=""
+            height="24"
+          />
+          <img
+            onclick="notAvailable()"
+            src="../icons/instagram_like_light.svg"
+            id="heart"
+            alt=""
+            height="24"
+          />
+        </div>
+      </header>
+      <main>
+        <div class="headlines_main">
+          <h2>Vorschläge für dich</h2>
+          <h2>Weitere Konten</h2>
+        </div>
+        <section id="suggestions_html">
+          <article>
+            <figure>
+              <img src="../img/bearded-man-square.jpg" alt="" height="64">
+            </figure>
+            <div class="author_html">
+              <div class="name">Jesusisalive</div>
+              <div class="realName">Peter Müller</div>
+              <div class="status">Beliebt</div>
+            </div>
+            
+            <button onclick="notAvailable()" class="follow_html">Folgen</button>
+          </article>
+        </section>
+      </main>
+      <div w3-include-html="../templates/footer.html"></div>
+    </div>
+    <div w3-include-html="../templates/navigation.html"></div>
+    
+  </body>
+</html>

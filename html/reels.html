@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Instagram Reels Backup</title>
+    <link rel="stylesheet" href="../css/reset_stylesheet.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <script src="../javascript/data.js" defer></script>
+    <script src="../javascript/script.js" defer></script>
+    <link rel="icon" href="../icons/instagram_logo_round.png" />
+  </head>
+  <body onload="initReels()">
+    <div id="page_reels">
+      <div id="detail_reels" class="detail-reels d-none"></div>
+
+      <main id="main_container_reels">
+        <div>
+          <input
+            class="search-field-reels hide_container"
+            type="text"
+            placeholder="Suchen ..."
+          />
+        </div>
+        <div class="headlines_main_reels">
+          <h2>Für dich</h2>
+          <img src="../icons/instagram_arrow_down.svg" alt="" height="12" />
+        </div>
+        <section id="main_content_reels"></section>
+      </main>
+
+      <div w3-include-html="../templates/navigation.html"></div>
+      <div w3-include-html="../templates/footer.html"></div>
+    </div>
+  </body>
+</html>
