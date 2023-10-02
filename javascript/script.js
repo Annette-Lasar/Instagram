@@ -355,17 +355,27 @@ function moveImageBox() {
   let smallScreen = getBoxId('figure_small_screen');
   let bigScreen = getBoxId('figure_big_screen');
   let windowSize = window.innerWidth;
-  if (windowSize >= 592) {
-    smallScreen.classList.add('d-none');
-    bigScreen.classList.remove('d-none');
-  } else {
+ /*  checkforExplorePage(); */
+
+  if (windowSize < 592) {
     smallScreen.classList.remove('d-none');
     bigScreen.classList.add('d-none');
+  } else {
+    smallScreen.classList.add('d-none');
+    bigScreen.classList.remove('d-none');
   }
+}
 
-  document.addEventListener('DOMContentLoaded', function () {
-    window.addEventListener('resize', moveImageBox);
-  });
+checkforExplorePage();
+
+function checkforExplorePage() {
+  let url = window.location.href; 
+
+  if (url.endsWith('explore.html')) {
+     document.addEventListener('DOMContentLoaded', function () {
+        window.addEventListener('resize', moveImageBox);
+     });
+  }
 }
 
 /* =================================================================================
