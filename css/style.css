@@ -376,12 +376,12 @@ explore.html: detailed view onclick (called "discovery")
 
 .discovery-wrapper.rectangular .figure-detail-explore {
   width: 100%;
+  height: 60%;
 }
 
 .figure-detail-explore {
   margin: 0 auto;
   width: 100%;
-  /* height: 60%; */
 }
 
 .discovery-icons-wrapper {

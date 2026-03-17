@@ -253,6 +253,7 @@ function likePost(i) {
   }
   posts[i].likes = newLikes;
   posts[i].liked = likedStatus;
+  saveComments();
   openImageDiscoveries(i);
 }
 
@@ -355,8 +356,7 @@ function moveImageBox() {
   let smallScreen = getBoxId('figure_small_screen');
   let bigScreen = getBoxId('figure_big_screen');
   let windowSize = window.innerWidth;
- /*  checkforExplorePage(); */
-
+ 
   if (windowSize < 592) {
     smallScreen.classList.remove('d-none');
     bigScreen.classList.add('d-none');
